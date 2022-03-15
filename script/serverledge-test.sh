@@ -24,5 +24,7 @@ then
    helpFunction
 fi
 
+cd ../
+locust -f locust-python/serverledge.py --web-port $parameterA --host $parameterB -u $parameterC --autostart --run-time 15m --html report-hp.html --csv "reports/hp"
 
-locust -f serverledge-low-load.py --web-port $parameterA --host $parameterB -u $parameterC --autostart --run-time 10m --html report-low.html --csv "reports/low"
+#/bin/bash serverledge-test.sh -p 5555 -h "http://34.65.129.69:1323" -u 200
