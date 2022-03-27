@@ -24,8 +24,8 @@ then
    helpFunction
 fi
 
-cd ../
-locust -f locust-python/openwhiskTest.py --web-port $parameterA --host $parameterB -u $parameterC --autostart --run-time 10m --html report-openwhisk.html --csv "openwhisk/openwhisk"
+
+locust -f openwhiskTest.py --web-port $parameterA --host $parameterB -u $parameterC -r 0.1 --run-time 10m --html report-openwhisk.html --csv "openwhisk/openwhisk"
 
 #command to execute
 
